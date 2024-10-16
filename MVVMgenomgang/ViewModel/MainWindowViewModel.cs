@@ -9,7 +9,7 @@ namespace MVVMgenomgang.ViewModel
         public ObservableCollection<Item> Items { get; set; }
 
         //Alternativ 1
-        //public RelayCommand AddCommand => new RelayCommand(execute => AddItem());
+        public RelayCommand AddCommand => new RelayCommand(execute => AddItem());
         //public RelayCommand DeleteCommand => new RelayCommand(execute => DeleteItem(), canExecute => selectedItem != null);
 
 

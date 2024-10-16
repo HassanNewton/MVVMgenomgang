@@ -18,11 +18,19 @@
         </Grid.RowDefinitions>
 
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="Add" Command="{Binding AddCommand}" Width="70" Height="30"/>
-            <Button Content="Delete" Command="{Binding DeleteCommand}" Width="70" Height="30"/>
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+            <Button
+                Width="70"
+                Height="30"
+                Command="{Binding AddCommand}"
+                Content="Add" />
+            <Button
+                Width="70"
+                Height="30"
+                Command="{Binding DeleteCommand}"
+                Content="Delete" />
         </StackPanel>
-        
+
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="7*" />
@@ -38,11 +46,20 @@
                 SelectedItem="{Binding SelectedItem}">
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="4*"/>
-                    <DataGridTextColumn Header="SerieNbr" Binding="{Binding SerieNbr}" Width="4*"/>
-                    <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" Width="1*"/>
+                    <DataGridTextColumn
+                        Width="4*"
+                        Binding="{Binding Name}"
+                        Header="Name" />
+                    <DataGridTextColumn
+                        Width="4*"
+                        Binding="{Binding SerieNbr}"
+                        Header="SerieNbr" />
+                    <DataGridTextColumn
+                        Width="1*"
+                        Binding="{Binding Quantity}"
+                        Header="Quantity" />
                 </DataGrid.Columns>
-                
+
             </DataGrid>
 
             <StackPanel Grid.Column="1">
